@@ -1,0 +1,182 @@
+[
+  {
+    "_id": "1",
+    "image": "https://i.ibb.co.com/Rb0Ky6H/bvlgari-octo-finissimo-x-laurent-grasso-104005.webp",
+    "brand_name": "Bvlgari",
+    "name": "Octo Finissimo X Laurent Grasso",
+    "rating": 4.8,
+    "description": "The Octo Finissimo X Laurent Grasso is a masterpiece of ultrathin design, featuring exceptional artistry and craftsmanship.",
+    "brand_logo": "https://i.ibb.co.com/6ZdnLNT/Bulgari-Emblem.png",
+    "coupons": [
+      { "code": "BVL20OFF", "discount": "20%" },
+      { "code": "FREESHIP", "discount": "Free Shipping" }
+    ],
+    "shop-Link": "https://www.bulgari.com/en-bd/",
+    "category": "Luxury Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "2",
+    "image": "https://i.ibb.co.com/3MZbNb8/bvlgari-bvlgari-aluminium-white-automatic-103964.webp",
+    "brand_name": "Bvlgari",
+    "name": "Bvlgari Aluminium White Automatic",
+    "rating": 4.6,
+    "description": "A stylish and durable automatic watch with a sleek white aluminum finish.",
+    "brand_logo": "https://i.ibb.co.com/6ZdnLNT/Bulgari-Emblem.png",
+    "coupons": [{ "code": "BVL15OFF", "discount": "15%" }],
+    "shop-Link": "https://www.bulgari.com/en-bd/",
+    "category": "Luxury Watches",
+    "isSaleOn": false
+  },
+  {
+    "_id": "3",
+    "image": "https://i.ibb.co.com/s6tmzM5/rolex-yacht-master-40-diamond-pave-dial-men-s-watch-126655-0005-109.jpg",
+    "brand_name": "Rolex",
+    "name": "Explorer II White Dial Oystersteel",
+    "rating": 4.9,
+    "description": "The Explorer II combines rugged durability with a classic white dial for adventure-ready sophistication.",
+    "brand_logo": "https://i.ibb.co.com/M5wdq2g/post-7-6485.jpg",
+    "coupons": [{ "code": "ROLEX5OFF", "discount": "5%" }],
+    "shop-Link": "https://example.com/shop/explorer-ii-white-dial",
+    "category": "Luxury Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "4",
+    "image": "https://i.ibb.co.com/Ttt6D39/rolex-explorer-ii-watch-m226570-0001-75.jpg",
+    "brand_name": "Rolex",
+    "name": "Yacht-Master 40 Diamond",
+    "rating": 4.9,
+    "description": "A dazzling Yacht-Master adorned with diamonds for a truly luxurious timepiece.",
+    "brand_logo": "https://i.ibb.co.com/M5wdq2g/post-7-6485.jpg",
+    "coupons": [{ "code": "DIAMOND10", "discount": "10%" }],
+    "shop-Link": "https://example.com/shop/yacht-master-40-diamond",
+    "category": "Luxury Watches",
+    "isSaleOn": false
+  },
+  {
+    "_id": "5",
+    "image": "https://i.ibb.co.com/drr9mfX/Casio-MTP-VD01-2-EVUDFWatch-4-800x.webp",
+    "brand_name": "Casio",
+    "name": "MTP-VD01-2EVUDF",
+    "rating": 4.4,
+    "description": "A reliable and affordable watch with a sleek design and durable build.",
+    "brand_logo": "https://i.ibb.co.com/VpK3v0P/0ac66c2f437644e10300b7fc5240ca1a.jpg",
+    "coupons": [
+      { "code": "CASIO10", "discount": "10%" },
+      { "code": "SUMMERSALE", "discount": "15%" }
+    ],
+    "shop-Link": "https://example.com/shop/mtp-vd01-2evudf",
+    "category": "Affordable Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "6",
+    "image": "https://i.ibb.co.com/hBnRX15/Casio-MTP-1374-D-2-AVDFWatch-1-600x.webps",
+    "brand_name": "Casio",
+    "name": "MTP-1374D-2AVDF",
+    "rating": 4.3,
+    "description": "A functional and fashionable watch for everyday wear with a classic design.",
+    "brand_logo": "https://i.ibb.co.com/VpK3v0P/0ac66c2f437644e10300b7fc5240ca1a.jpg",
+    "coupons": [{ "code": "CASIO5OFF", "discount": "5%" }],
+    "shop-Link": "https://example.com/shop/mtp-1374d-2avdf",
+    "category": "Affordable Watches",
+    "isSaleOn": false
+  },
+  {
+    "_id": "7",
+    "image": "https://i.ibb.co.com/HHSK6Kk/images-5.jpg",
+    "brand_name": "Rolex",
+    "name": "Daytona Cosmograph",
+    "rating": 4.9,
+    "description": "The Daytona Cosmograph is an iconic chronograph known for its precision and timeless design.",
+    "brand_logo": "https://i.ibb.co.com/ABC456/Rolex-Emblem.png",
+    "coupons": [
+      { "code": "ROLEX15", "discount": "15%" },
+      { "code": "DAYTONA5", "discount": "5% off on next purchase" }
+    ],
+    "shop-Link": "https://example.com/shop/daytona-cosmograph",
+    "category": "Luxury Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "8",
+    "image": "https://i.ibb.co.com/GRkxfny/download-9.jpg",
+    "brand_name": "Cartier",
+    "name": "Santos de Cartier",
+    "rating": 4.7,
+    "description": "The Santos de Cartier is a blend of classic elegance and modern watchmaking craftsmanship.",
+    "brand_logo": "https://i.ibb.co.com/DEF123/Cartier-Emblem.png",
+    "coupons": [
+      { "code": "CARTIER10", "discount": "10%" },
+      { "code": "FREESHIPCARTIER", "discount": "Free Shipping" }
+    ],
+    "shop-Link": "https://example.com/shop/santos-de-cartier",
+    "category": "Luxury Watches",
+    "isSaleOn": false
+  },
+  {
+    "_id": "9",
+    "image": "https://i.ibb.co.com/KKPXF9P/download-10.jpg",
+    "brand_name": "Patek Philippe",
+    "name": "Nautilus 5711",
+    "rating": 5.0,
+    "description": "The Nautilus 5711 is a symbol of refined luxury and exceptional craftsmanship.",
+    "brand_logo": "https://i.ibb.co.com/GHI789/Patek-Emblem.png",
+    "coupons": [
+      { "code": "PATEK5OFF", "discount": "5%" },
+      { "code": "NAUTILUSGIFT", "discount": "Free Accessory" }
+    ],
+    "shop-Link": "https://example.com/shop/nautilus-5711",
+    "category": "Luxury Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "10",
+    "image": "https://i.ibb.co.com/G0kvKby/download-11.jpg",
+    "brand_name": "Audemars Piguet",
+    "name": "Royal Oak Offshore",
+    "rating": 4.8,
+    "description": "The Royal Oak Offshore combines bold design with superior functionality.",
+    "brand_logo": "https://i.ibb.co.com/JKL123/AP-Emblem.png",
+    "coupons": [
+      { "code": "AP30OFF", "discount": "30%" },
+      { "code": "FREESHIPAP", "discount": "Free Shipping" }
+    ],
+    "shop-Link": "https://example.com/shop/royal-oak-offshore",
+    "category": "Luxury Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "11",
+    "image": "https://i.ibb.co.com/QM5BwDV/download-12.jpg",
+    "brand_name": "Omega",
+    "name": "Speedmaster Professional",
+    "rating": 4.6,
+    "description": "The Speedmaster Professional is a legendary watch worn during the Apollo moon missions.",
+    "brand_logo": "https://i.ibb.co.com/MNO456/Omega-Emblem.png",
+    "coupons": [
+      { "code": "OMEGA25", "discount": "25%" },
+      { "code": "MOONFREE", "discount": "Free Extra Strap" }
+    ],
+    "shop-Link": "https://example.com/shop/speedmaster-professional",
+    "category": "Luxury Watches",
+    "isSaleOn": false
+  },
+  {
+    "_id": "12",
+    "image": "https://i.ibb.co.com/K66LPYJ/download-13.jpg",
+    "brand_name": "TAG Heuer",
+    "name": "Monaco",
+    "rating": 4.5,
+    "description": "The TAG Heuer Monaco is a bold, square-shaped chronograph with a racing heritage.",
+    "brand_logo": "https://i.ibb.co.com/PQR678/Tag-Heuer-Emblem.png",
+    "coupons": [
+      { "code": "TAGHEUER10", "discount": "10%" },
+      { "code": "RACEGIFT", "discount": "Free Limited Edition Strap" }
+    ],
+    "shop-Link": "https://example.com/shop/tag-heuer-monaco",
+    "category": "Luxury Watches",
+    "isSaleOn": true
+  }
+]
