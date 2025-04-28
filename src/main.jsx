@@ -4,9 +4,12 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import routers from "./routes/routers";
 import "animate.css";
+import WatchesProvider from "./providers/WatchesProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={routers}></RouterProvider>
+    <WatchesProvider>
+      <RouterProvider router={routers}></RouterProvider>
+    </WatchesProvider>
   </StrictMode>
 );
