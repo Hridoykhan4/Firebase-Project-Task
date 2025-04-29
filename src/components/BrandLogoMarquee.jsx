@@ -11,11 +11,14 @@ const BrandLogoMarquee = () => {
       <Marquee pauseOnHover={true} className="">
         {watches.map((watch, index) => (
           <>
-            <Link to={`/brand/detail/${watch._id}`}>
+            <Link to={`/coupon/${watch._id}`}>
               <img
                 key={index}
                 className="h-10 mx-5"
-                src={watch.brand_logo || `https://i.ibb.co.com/GRkxfny/download-9.jpg`}
+                src={
+                  watch.brand_logo ||
+                  `https://i.ibb.co.com/GRkxfny/download-9.jpg`
+                }
                 alt={`Logo of ${watch.brand_name || "Brand"}`}
               />
             </Link>

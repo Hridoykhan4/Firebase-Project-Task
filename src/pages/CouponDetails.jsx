@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useGetWatch from "../hooks/useGetWatch";
 import { useParams } from "react-router-dom";
 import StarRatings from "react-star-ratings";
+import toast from "react-hot-toast";
 
 const CouponDetails = () => {
   const { watches } = useGetWatch();
@@ -12,12 +13,11 @@ const CouponDetails = () => {
 
   useEffect(() => {
     const matchedItem = watches.find((watch) => watch._id === couponId);
-    setWatch(matchedItem || {}); 
+    setWatch(matchedItem || {});
   }, [couponId, watches]);
 
   return (
     <div className="container mx-auto p-6">
-    
       <div className="bg-base-200 shadow-xl rounded-lg p-8 mb-10">
         <div className="flex flex-col lg:flex-row items-center gap-8">
           <img
@@ -47,7 +47,6 @@ const CouponDetails = () => {
         </div>
       </div>
 
-
       <h2 className="text-2xl font-bold mb-6 text-center text-primary">
         Available Coupons
       </h2>
@@ -67,7 +66,36 @@ const CouponDetails = () => {
                   <span className="text-success font-bold">{coupon?.code}</span>
                 </p>
                 <div className="justify-end card-actions">
-                  <button className="btn btn-primary btn-sm" onClick={() => navigator.clipboard.writeText(coupon?.code)}>Copy Code</button>
+                  <button
+                    className="btn btn-primary btn-sm"
+                    onClick={() => {
+                      navigator.clipboard.writeText(coupon?.code);
+                      toast.success("Successfully Copied", {
+                        duration: 4000,
+                        position: "bottom-right",
+
+                        style: {
+                          background: "#0f766e",
+                          color: "#ffffff",
+                          border: "2px solid #14b8a6",
+                          padding: "16px",
+                          borderRadius: "12px",
+                          fontWeight: "bold",
+                          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+                        },
+                        className: "",
+
+                        ariaProps: {
+                          role: "status",
+                          "aria-live": "polite",
+                        },
+
+                        removeDelay: 1000,
+                      });
+                    }}
+                  >
+                    Copy Code
+                  </button>
                 </div>
               </div>
             </div>
