@@ -8,7 +8,7 @@ const BrandsOnSale = () => {
   return (
     <>
       <section>
-        <h2 className="text-center font-bold text-2xl md:text-4xl text-gray-800 pb-6 underline decoration-wavy decoration-primary underline-offset-8">
+        <h2 className="text-center font-bold text-2xl md:text-4xl text-gray-800 pb-6 underline decoration-dashed decoration-primary underline-offset-8">
           Watch On Sale
         </h2>
 
@@ -21,7 +21,7 @@ const BrandsOnSale = () => {
           )}
         </div>
 
-        <div className="flex justify-center my-5">
+      <div className="flex justify-center my-5">
           <button className="relative inline-block px-6 py-3 font-semibold tracking-wide text-white transition-all duration-300 ease-in-out bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg shadow-md hover:from-blue-600 hover:to-cyan-500 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             <Link to="/brands" className="relative z-10">
               View All Brands Coupon

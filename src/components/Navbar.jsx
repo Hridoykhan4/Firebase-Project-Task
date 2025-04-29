@@ -1,6 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import watchLogo from "../assets/watchLogo.png";
+import useAuth from "../hooks/useAuth";
+
 const Navbar = () => {
+  const { user, signOutUser } = useAuth();
+
   const links = (
     <>
       <li className="">
@@ -9,14 +13,22 @@ const Navbar = () => {
       <li>
         <NavLink to="/brands">Brands</NavLink>
       </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to="/myProfile">My Profile</NavLink>
+          </li>
+        </>
+      )}
       <li>
-        <NavLink>My Profile</NavLink>
-      </li>
-      <li>
-        <NavLink>About Dev</NavLink>
+        <NavLink to="/aboutUs">About Us</NavLink>
       </li>
     </>
   );
+
+  const handleUserLogOut = () => {
+    signOutUser();
+  };
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -53,8 +65,39 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">login</a>
+      <div className="navbar-end cursor-pointer">
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle"
+            >
+              <img
+                className=" h-10 w-10 rounded-full object-cover"
+                src={user?.photoURL}
+                alt=""
+              />
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 right-2 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a>{user?.email || "Email Not Found"}</a>
+              </li>
+              <li>
+                <button onClick={handleUserLogOut} className="btn">
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/login" className="btn">
+            login
+          </Link>
+        )}
       </div>
     </div>
   );

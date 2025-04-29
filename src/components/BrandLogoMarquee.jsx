@@ -8,7 +8,7 @@ const BrandLogoMarquee = () => {
     <div className="flex items-center gap-5 bg-base-200 p-2">
       <p className="bg-[#FF6D3F] text-white px-4 py-2 rounded-md">Brands</p>
 
-      <Marquee pauseOnHover={true} className="w-full">
+      <Marquee pauseOnHover={true} className="">
         {watches.map((watch, index) => (
           <>
             <Link to={`/brand/detail/${watch._id}`}>

@@ -5,11 +5,14 @@ import { RouterProvider } from "react-router-dom";
 import routers from "./routes/routers";
 import "animate.css";
 import WatchesProvider from "./providers/WatchesProvider";
+import AuthProvider from "./providers/AuthProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <WatchesProvider>
-      <RouterProvider router={routers}></RouterProvider>
-    </WatchesProvider>
+    <AuthProvider>
+      <WatchesProvider>
+        <RouterProvider router={routers}></RouterProvider>
+      </WatchesProvider>
+    </AuthProvider>
   </StrictMode>
 );

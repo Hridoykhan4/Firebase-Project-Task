@@ -1,12 +1,10 @@
-# React + Vite
+Project Name: Watch FlashSale Pro
+This project is a simple Coupon Collecting Application designed to help users easily find and use discount coupons for different watch brands.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+There are a lot of watch stores that provide various types of vouchers and coupon codes for discounts . Our application will collect all the coupons available on each store so that people can easily achieve discounts and save money .
 
-Currently, two official plugins are available:
+Users can sign up or log in using their email or Google account through Firebase Authentication. Once logged in, users can browse available coupons for different brands, see details like discount amount, and product categories, and copy coupon codes with a single click.
+<!-- 
+Include a README file with the project name, purpose, live URL, key features, and any npm packages you have used.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ -->

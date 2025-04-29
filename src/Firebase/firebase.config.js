@@ -1,14 +1,13 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyChWOJtsBDSY6408UAoK1GqDm4QBGSWHng",
-  authDomain: "watch-flashsale-pro.firebaseapp.com",
-  projectId: "watch-flashsale-pro",
-  storageBucket: "watch-flashsale-pro.firebasestorage.app",
-  messagingSenderId: "301784899096",
-  appId: "1:301784899096:web:abfb9725769aa237802d6d",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
-
 
 const app = initializeApp(firebaseConfig);
 export default app;

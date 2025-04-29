@@ -4,3 +4,9 @@
 .image-gallery-image {
   @apply rounded-xl shadow-lg object-cover w-full h-[400px];
 }
+
+a.active{
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
+}

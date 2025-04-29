@@ -2,10 +2,11 @@ import Aos from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import StarRatings from "react-star-ratings";
+import { Link } from "react-router-dom";
 
 const Product = ({ watches, rating, isSaleOn }) => {
-  console.log(rating);
-  const { image, brand_name, coupons, category, description } = watches;
+  const { image, brand_name, coupons, category, description, _id } =
+    watches || {};
 
   const animations = ["fade-up", "zoom-in", "flip-left", "fade-right"];
   const randomAnimation =
@@ -44,7 +45,7 @@ const Product = ({ watches, rating, isSaleOn }) => {
         />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">Brand: {brand_name}</h2>
+        <h2 className="card-title">Brand: {brand_name}, {coupons[0]?.discount} Off</h2>
         <p className="font-medium">Total Coupons: {coupons.length}</p>
         <p className="w-9/12 mx-auto">{description}</p>
         <p className="font-medium">Category: {category}</p>
@@ -62,9 +63,12 @@ const Product = ({ watches, rating, isSaleOn }) => {
           </>
         )}
 
-        <button className="btn bg-[#FF6D3F] hover:bg-[#FF5722] text-white border-none">
+        <Link
+          to={`/coupon/${_id}`}
+          className="btn bg-[#FF6D3F] hover:bg-[#FF5722] text-white border-none"
+        >
           View Coupons
-        </button>
+        </Link>
       </div>
     </div>
   );
