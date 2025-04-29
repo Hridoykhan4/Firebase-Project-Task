@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [error, setError] = useState("");
@@ -22,9 +23,56 @@ const Login = () => {
     signInUser(data.email, data.password)
       .then((result) => {
         setUser(result.user);
+        toast.success('✅ Login Successful!', {
+          duration: 4000,
+          position: 'bottom-left', 
+        
+          style: {
+            background: '#0f766e', 
+            color: '#ffffff',
+            border: '2px solid #14b8a6', 
+            padding: '16px',
+            borderRadius: '12px',
+            fontWeight: 'bold',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+          },
+          className: '',
+        
+          ariaProps: {
+            role: 'status',
+            'aria-live': 'polite',
+          },
+        
+          removeDelay: 1000,
+        });
+        
         nav(state ? state : "/");
       })
-      .catch((err) => setError(err.code));
+      .catch((err) => {
+        setError(err.code);
+        toast.error(`🚫 Error: ${err.code}`, {
+          duration: 4000,
+          position: "bottom-right",
+
+          style: {
+            background: "#1e293b",
+            color: "#facc15",
+            border: "2px solid #f43f5e",
+            padding: "16px",
+            borderRadius: "12px",
+            fontWeight: "bold",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
+          },
+          className: "",
+
+          ariaProps: {
+            role: "status",
+            "aria-live": "polite",
+          },
+
+          removeDelay: 1000,
+        });
+      });
   };
 
   const handleForgetPassword = () => {

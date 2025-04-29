@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
@@ -41,7 +42,7 @@ const Register = () => {
     } else if (!isMinLength) {
       return setPassValidation("Password must be at least 6 characters long.");
     } else {
-       setPassValidation("Password is valid. Proceed with registration.");
+      setPassValidation("Password is valid. Proceed with registration.");
     }
 
     const name = data.name;
@@ -52,9 +53,55 @@ const Register = () => {
         updateUserProfile(name, photo).then(() => {
           setUser(result.user);
           nav(navTo);
+          toast.success("✅ Registration Successful!", {
+            duration: 4000,
+            position: "bottom-left",
+
+            style: {
+              background: "#0f766e",
+              color: "#ffffff",
+              border: "2px solid #14b8a6",
+              padding: "16px",
+              borderRadius: "12px",
+              fontWeight: "bold",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+            },
+            className: "",
+
+            ariaProps: {
+              role: "status",
+              "aria-live": "polite",
+            },
+
+            removeDelay: 1000,
+          });
         });
       })
-      .catch((err) => setPassValidation(err.code));
+      .catch((err) => {
+        setPassValidation(err.code);
+        toast.error(`🚫 Error: ${err.code}`, {
+          duration: 4000,
+          position: "bottom-right",
+
+          style: {
+            background: "#1e293b",
+            color: "#facc15",
+            border: "2px solid #f43f5e",
+            padding: "16px",
+            borderRadius: "12px",
+            fontWeight: "bold",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
+          },
+          className: "",
+
+          ariaProps: {
+            role: "status",
+            "aria-live": "polite",
+          },
+
+          removeDelay: 1000,
+        });
+      });
   };
 
   return (

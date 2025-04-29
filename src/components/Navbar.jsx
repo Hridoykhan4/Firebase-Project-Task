@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import watchLogo from "../assets/watchLogo.png";
 import useAuth from "../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, signOutUser } = useAuth();
@@ -28,6 +29,28 @@ const Navbar = () => {
 
   const handleUserLogOut = () => {
     signOutUser();
+    toast.success("✅ Logout Successful!", {
+      duration: 4000,
+      position: "bottom-left",
+
+      style: {
+        background: "#0f766e",
+        color: "#ffffff",
+        border: "2px solid #14b8a6",
+        padding: "16px",
+        borderRadius: "12px",
+        fontWeight: "bold",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+      },
+      className: "",
+
+      ariaProps: {
+        role: "status",
+        "aria-live": "polite",
+      },
+
+      removeDelay: 1000,
+    });
   };
 
   return (

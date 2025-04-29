@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const Footer = () => {
@@ -7,20 +7,20 @@ const Footer = () => {
   const links = (
     <>
       <li className="">
-        <NavLink to="/">Home</NavLink>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <NavLink to="/brands">Brands</NavLink>
+        <Link to="/brands">Brands</Link>
       </li>
       {user && (
         <>
           <li>
-            <NavLink to="/myProfile">My Profile</NavLink>
+            <Link to="/myProfile">My Profile</Link>
           </li>
         </>
       )}
       <li>
-        <NavLink to="/aboutUs">About Us</NavLink>
+        <Link to="/aboutUs">About Us</Link>
       </li>
     </>
   );
